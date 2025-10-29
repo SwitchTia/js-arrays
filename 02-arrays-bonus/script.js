@@ -13,6 +13,7 @@ const teachers = [
 const reversedTeachers = teachers.reverse();
 console.log(reversedTeachers);
 
+
 // 2. Crea un nuovo array chiamato 'longNames' che contenga solo gli insegnanti
 // con un nome di lunghezza maggiore o uguale a 5 caratteri
 const longNames = null;
@@ -27,8 +28,16 @@ const isFabioPresent = null;
 let teachersString = teachers.concat(); //????
 console.log(teachersString);  
 
-
+//un altro modo con concatenazione somma degli iterazioni
 let teachersString1 = "";
+for (let i = 0; i < teachers.length; i++){
+  const currentTeacher = teachers[i];
+  teachersString1 += currentTeacher + ",";
+}
+console.log(teachersString1);
+
+//un altro modo con metodo .toString
+let teachersString2 = "";
 for (let i = 0; i < teachers.length; i++){
   teachersString1 = teachers.toString(i);
 }
