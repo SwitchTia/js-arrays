@@ -64,18 +64,15 @@ console.log(`Es.3 ${teachers}`);
 
 // 4. Verifica se 'Fabio' è presente nell'array teachers
 // e salva il risultato nella variabile isFabioPresent
-let isFabioPresent = "";
-
+let isFabioPresent = false;
 // modo col il ciclo for:
-
 //ancora non mi funziona
 for(let i = 0; i < teachers.length; i++){
   const currentTeacher = teachers[i];
-  if(currentTeacher == "Fabio"){
+  if(currentTeacher == "Fabio"){    
     isFabioPresent = true; 
-  }
-  else{
-    isFabioPresent = false;
+    //continue; // means skip the rest of this body and go to next iteration
+    break;
   }
 }
 console.log(`Es.4 ${isFabioPresent}`);
