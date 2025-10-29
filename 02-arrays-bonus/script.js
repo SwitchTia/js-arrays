@@ -38,7 +38,7 @@ let longNames = [];
 for(let i = 0; i < teachers.length; i++){
   const currentTeacher = teachers[i];
   if(currentTeacher.length >= 5){
-    longNames += currentTeacher + ","; 
+    longNames.push(currentTeacher) 
   }
 }
 console.log(`Es.2 ${longNames}`);
