@@ -8,14 +8,18 @@ const teachers = [
   'Luca'
 ]; // NON MODIFICARE QUESTA VARIABILE
 
+
+
+
 // 1. Inverti l'ordine degli insegnanti nell'array teachers e salva il risultato nella variabile reversedTeachers
 
 //modo di base con la funzione .reverse()
-const reversedTeachers = teachers.reverse();
-console.log(`Es.1 ${reversedTeachers}`);
+// const reversedTeachers = teachers.reverse();
+// console.log(`Es.1 ${reversedTeachers}`);
 
 //modo elaborato con il ciclo for
 let reversedTeachers1 = [];
+
 for(let i = teachers.length-1; i > 0; i --){
   const currentTeacher = teachers[i];
   reversedTeachers1 += currentTeacher + ",";
@@ -23,8 +27,10 @@ for(let i = teachers.length-1; i > 0; i --){
 console.log(`Es.1 ${reversedTeachers1}`);
 
 
-// 2. Crea un nuovo array chiamato 'longNames' che contenga solo gli insegnanti
-// con un nome di lunghezza maggiore o uguale a 5 caratteri
+
+// 2. Crea un nuovo array chiamato 'longNames' che contenga solo gli insegnanti con un nome di lunghezza maggiore o uguale a 5 caratteri
+
+//modo funzione substring?
 
 //modo elaborato con il ciclo for
 let longNames = [];
@@ -32,15 +38,27 @@ let longNames = [];
 for(let i = 0; i < teachers.length; i++){
   const currentTeacher = teachers[i];
   if(currentTeacher.length >= 5){
-    longNames += currentTeacher; 
+    longNames += currentTeacher + ","; 
   }
 }
 console.log(`Es.2 ${longNames}`);
 
 
 
-
 // 3. Rimuovi 'Ed' dall'array teachers
+
+//modo con la funzione .splice
+teachers.splice(1,1);
+console.log(`Es.3 ${teachers}`);
+
+//modo elaborato con il ciclo for
+for(let i = 0; i < teachers.length; i++){
+  const currentTeacher = teachers[i];
+  if(currentTeacher == "Ed"){
+    teachers.splice(i, 1); 
+  }
+}
+console.log(`Es.3 ${teachers}`);
 
 
 
