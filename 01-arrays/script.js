@@ -60,5 +60,5 @@ else{
 console.log(isTeachersEmpty);
 
 //operazione terniaria
-const isTeachersEmpty2 = (teachers.length > 0)? ("false") : ("true");
+const isTeachersEmpty1 = (teachers.length > 0)? ("false") : ("true");
 console.log(isTeachersEmpty2);
