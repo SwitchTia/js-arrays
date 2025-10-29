@@ -26,7 +26,7 @@ const isFabioPresent = null;
 
 // 5. Unisci tutti gli insegnanti nell'array teachers in una stringa  separata da virgole e salvala nella variabile teachersString
 let teachersString = teachers.concat(); //????
-console.log(teachersString);  
+console.log(`Es.5 ${teachersString}`);  
 
 //un altro modo con concatenazione somma degli iterazioni
 let teachersString1 = "";
@@ -34,11 +34,11 @@ for (let i = 0; i < teachers.length; i++){
   const currentTeacher = teachers[i];
   teachersString1 += currentTeacher + ",";
 }
-console.log(teachersString1);
+console.log(`Es.5 ${teachersString1}`);
 
 //un altro modo con metodo .toString
 let teachersString2 = "";
 for (let i = 0; i < teachers.length; i++){
-  teachersString1 = teachers.toString(i);
+  teachersString2 = teachers.toString(i);
 }
-console.log(teachersString1);
+console.log(`Es.5 ${teachersString2}`);
