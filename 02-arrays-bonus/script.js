@@ -8,10 +8,19 @@ const teachers = [
   'Luca'
 ]; // NON MODIFICARE QUESTA VARIABILE
 
-// 1. Inverti l'ordine degli insegnanti nell'array teachers
-// e salva il risultato nella variabile reversedTeachers
+// 1. Inverti l'ordine degli insegnanti nell'array teachers e salva il risultato nella variabile reversedTeachers
+
+//modo di base con la funzione .reverse()
 const reversedTeachers = teachers.reverse();
-console.log(reversedTeachers);
+console.log(`Es.1 ${reversedTeachers}`);
+
+//modo elaborato con il ciclo for
+let reversedTeachers1 = [];
+for(let i = teachers.length-1; i > 0; i --){
+  const currentTeacher = teachers[i];
+  reversedTeachers1 += currentTeacher + ",";
+}
+console.log(`Es.1 ${reversedTeachers1}`);
 
 
 // 2. Crea un nuovo array chiamato 'longNames' che contenga solo gli insegnanti
