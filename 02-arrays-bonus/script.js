@@ -14,8 +14,8 @@ const teachers = [
 // 1. Inverti l'ordine degli insegnanti nell'array teachers e salva il risultato nella variabile reversedTeachers
 
 //modo di base con la funzione .reverse()
-// const reversedTeachers = teachers.reverse();
-// console.log(`Es.1 ${reversedTeachers}`);
+const reversedTeachers = teachers.reverse();
+console.log(`Es.1 ${reversedTeachers}`);
 
 //modo elaborato con il ciclo for
 let reversedTeachers1 = [];
@@ -48,7 +48,7 @@ console.log(`Es.2 ${longNames}`);
 // 3. Rimuovi 'Ed' dall'array teachers
 
 //modo con la funzione .splice
-teachers.splice(1,1);
+teachers.splice(5,1);
 console.log(`Es.3 ${teachers}`);
 
 //modo elaborato con il ciclo for
@@ -64,14 +64,13 @@ console.log(`Es.3 ${teachers}`);
 
 // 4. Verifica se 'Fabio' è presente nell'array teachers
 // e salva il risultato nella variabile isFabioPresent
+
 let isFabioPresent = false;
 // modo col il ciclo for:
-//ancora non mi funziona
 for(let i = 0; i < teachers.length; i++){
   const currentTeacher = teachers[i];
   if(currentTeacher == "Fabio"){    
     isFabioPresent = true; 
-    //continue; // means skip the rest of this body and go to next iteration
     break;
   }
 }
@@ -80,10 +79,12 @@ console.log(`Es.4 ${isFabioPresent}`);
 
 
 // 5. Unisci tutti gli insegnanti nell'array teachers in una stringa  separata da virgole e salvala nella variabile teachersString
+
+//modo col la funzione .concat()
 let teachersString = teachers.concat(); //????
 console.log(`Es.5 ${teachersString}`);  
 
-//un altro modo con concatenazione somma degli iterazioni
+//modo con concatenazione somma degli iterazioni
 let teachersString1 = "";
 for (let i = 0; i < teachers.length; i++){
   const currentTeacher = teachers[i];
