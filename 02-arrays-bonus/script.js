@@ -20,9 +20,9 @@ const teachers = [
 //modo elaborato con il ciclo for
 let reversedTeachers1 = [];
 
-for(let i = teachers.length-1; i > 0; i --){
+for(let i = teachers.length-1; i >= 0; i--){
   const currentTeacher = teachers[i];
-  reversedTeachers1 += currentTeacher + ",";
+  reversedTeachers1.push(currentTeacher)
 }
 console.log(`Es.1 ${reversedTeachers1}`);
 
